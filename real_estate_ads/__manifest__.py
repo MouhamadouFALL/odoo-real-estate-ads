@@ -3,13 +3,18 @@
     "description": """
         Real Estate Module to show available properties
     """,
-    "vsersion": "1.0",
+    "version": "1.0",
     "website": "www.ccbm.sn",
     "category": "Sales",
     "author": "CCBM-DEV",
-    "depends": ['base'],
-    "data": [],
+    "depends": [],
+    "data": [
+        'security/ir.model.access.csv',
+        'views/property_view.xml',
+        'views/property_type_view.xml',
+        'views/menu_items.xml',
+    ],
     "installable": True,
     "application": True,
-    "license": "LGPL-3",
+    "license": "LGPL-3"
 }
