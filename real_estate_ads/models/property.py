@@ -6,7 +6,7 @@ class Property(models.Model):
     _description = 'Estate properties'
 
     name = fields.Char(string="Name")
-    type_id = fields.Many2one('estate.property.type', stirng="Property Type")
+    type_id = fields.Many2one('estate.property.type', string="Property Type")
     tag_ids = fields.Many2many('estate.property.tag', string="Tags")
     description = fields.Text(string="Description")
     postcode = fields.Char(string="Postcode")
@@ -26,7 +26,9 @@ class Property(models.Model):
         ('east', 'East'),
         ('west', 'West')], default="north")
 
-    offer_ids = fields.One2many('estate.property.offer', 'property_id', string="Property")
+    offer_ids = fields.One2many('estate.property.offer', 'property_id')
+    sales_id = fields.Many2one('res.users', string="Salesman")
+    buyer_id = fields.Many2one('res.partner', string="Buyer")
 
 
 class PropertyType(models.Model):
