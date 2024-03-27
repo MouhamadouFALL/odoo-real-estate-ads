@@ -51,6 +51,7 @@
                                     <field name="garage"/>
                                     <field name="garden"/>
                                     <field name="garden_area"/>
+                                    <field name="total_area"/>
                                 </group>
                             </page>
                             <page string="Offers">
@@ -60,6 +61,7 @@
                                             <field name="price"/>
                                             <field name="partner_id"/>
                                             <field name="status" nolabel="1"/>
+                                            <field name="creation_date"/>
                                             <field name="validity"/>
                                             <field name="deadline"/>
                                         </tree>
