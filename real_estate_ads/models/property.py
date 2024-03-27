@@ -28,7 +28,8 @@ class Property(models.Model):
 
     offer_ids = fields.One2many('estate.property.offer', 'property_id')
     sales_id = fields.Many2one('res.users', string="Salesman")
-    buyer_id = fields.Many2one('res.partner', string="Buyer")
+    buyer_id = fields.Many2one('res.partner', string="Buyer", domain=[('is_company', '=', True)])
+    phone = fields.Char(string="Telephone", related='buyer_id.phone')
 
     total_area = fields.Integer(string="Total Area")
 
